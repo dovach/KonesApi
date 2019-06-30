@@ -12,7 +12,7 @@ import com.konesfind.api.classes.Auction;
 
 
 @Repository
-	@RepositoryRestResource(collectionResourceRel = "auctions", path = "auctions")
+	@RepositoryRestResource(collectionResourceRel = "auctions2", path = "auctions2")
 	public interface AuctionRepository extends PagingAndSortingRepository<Auction,Long> {
 		List<Auction> findByauctionName(@Param("auctionName") String auctionName);
 		List<Auction> findByclosingAt(@Param("closingAt") String closingAt);

@@ -47,11 +47,11 @@ public class Auction {
     @Column(name = "closing_at", nullable = false)
     private Date closingAt;
 
-    @Column(name = "base_price", nullable = false)
-    private Currency BasePrice;
+	@Column(name = "base_price", nullable = false)
+    private String BasePrice;
     
     @Column(name = "current_price", nullable = false)
-    private Currency CurrentPrice;
+    private String CurrentPrice;
     
     Auction(){}
     
@@ -111,19 +111,19 @@ public class Auction {
 		this.closingAt = closingAt;
 	}
 
-	public Currency getBasePrice() {
+    public String getBasePrice() {
 		return BasePrice;
 	}
 
-	public void setBasePrice(Currency basePrice) {
+	public void setBasePrice(String basePrice) {
 		BasePrice = basePrice;
 	}
 
-	public Currency getCurrentPrice() {
+	public String getCurrentPrice() {
 		return CurrentPrice;
 	}
 
-	public void setCurrentPrice(Currency currentPrice) {
+	public void setCurrentPrice(String currentPrice) {
 		CurrentPrice = currentPrice;
 	}
     

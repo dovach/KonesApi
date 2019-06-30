@@ -41,7 +41,7 @@ public class AuctionController {
    */
   @GetMapping("/auctions/{id}")
   public ResponseEntity<Auction> getAuctionsById(@PathVariable(value = "id") Long auctionId)
-      throws ResourceNotFoundException {
+      throws ResourceNotFoundException,IllegalArgumentException {
 	  Auction auction =
         auctionrRepository
             .findById(auctionId)
@@ -58,6 +58,7 @@ public class AuctionController {
   public Auction createAuction(@Valid @RequestBody Auction auction) {
     return auctionrRepository.save(auction);
   }
+  
 //  /**
 //   * Update auction response entity.
 //   *
